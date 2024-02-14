@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Recognization with tesserato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="flex justify-center items-center">
+            <h1>Image Recognition</h1>
+        </header>
+        <main class="flex">
+            <div class="left">
+                <div class="header flex relative">
+                    <label for="file">Click here to select a image file!</label>
+                    <input type="file" name="file" id="file">
+                    <button id="start">Start</button>
+                </div>
+                <div class="section">
+                    <div class="image">
+                        <img id="image">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="section">
+                    <textarea name="output" id="text" rows="5" placeholder="Text output"></textarea>
+                    <div class="footer">
+                        <div class="flex items-center">
+                            <label for="progress1">Loading Tesseract Core</label>
+                            <progress id="progress1" class="progress" max="1" value="0"> 0% </progress>
+                        </div>
+
+                        <div class="flex items-center">
+                            <label for="progress2">Initializing Tesseract</label>
+                            <progress id="progress2" class="progress" max="1" value="0"> 0% </progress>
+                        </div>
+
+                        <div class="flex items-center">
+                            <label for="progress3">Loading Language Traineddata</label>
+                            <progress id="progress3" class="progress" max="1" value="0"> 0% </progress>
+                        </div>
+
+                        <div class="flex items-center">
+                            <label for="progress4">Initializing API</label>
+                            <progress id="progress4" class="progress" max="1" value="0"> 0% </progress>
+                        </div>
+                        <div class="flex items-center">
+                            <label for="progress5">Recognizing Text</label>
+                            <progress id="progress5" class="progress" max="1" value="0"> 0% </progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- v5 -->
+<script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <script src="app.js"></script>
+</body>
+</html>
